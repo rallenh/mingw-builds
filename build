@@ -241,8 +241,14 @@ while [[ $# > 0 ]]; do
 				v3)
 					RUNTIME_BRANCH="v3.x"
 				;;
-				v4|trunk)
-					RUNTIME_VERSION=v4
+				v4)
+					RUNTIME_BRANCH="v4.x"
+				;;
+				v5)
+					RUNTIME_BRANCH="v5.x"
+				;;
+				trunk)
+					RUNTIME_VERSION=v5
 					RUNTIME_BRANCH="master"
 				;;
 				v?.?.?)
