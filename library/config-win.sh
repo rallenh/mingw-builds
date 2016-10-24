@@ -36,8 +36,8 @@
 # **************************************************************************
 
 readonly HOST_MINGW_VERSION=4.9.3
-readonly i686_HOST_MINGW_PATH_URL="http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/$HOST_MINGW_VERSION/threads-posix/{exceptions}/i686-$HOST_MINGW_VERSION-release-posix-{exceptions}-rt_v4-rev0.7z"
-readonly x86_64_HOST_MINGW_PATH_URL="http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/$HOST_MINGW_VERSION/threads-posix/{exceptions}/x86_64-$HOST_MINGW_VERSION-release-posix-{exceptions}-rt_v4-rev0.7z"
+readonly i686_HOST_MINGW_PATH_URL="http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/$HOST_MINGW_VERSION/threads-posix/{exceptions}/i686-$HOST_MINGW_VERSION-release-posix-{exceptions}-rt_v4-rev1.7z"
+readonly x86_64_HOST_MINGW_PATH_URL="http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/$HOST_MINGW_VERSION/threads-posix/{exceptions}/x86_64-$HOST_MINGW_VERSION-release-posix-{exceptions}-rt_v4-rev1.7z"
 
 # **************************************************************************
 
@@ -96,7 +96,7 @@ function func_test_installed_packages {
 		sshpass
 		texinfo
 	)
-	
+
 	local not_installed_packages=()
 
 	for it in ${required_packages[@]}; do
