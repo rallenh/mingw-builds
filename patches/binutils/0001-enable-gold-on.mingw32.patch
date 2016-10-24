@@ -1,14 +1,15 @@
---- binutils-2.23.1/configure.orig	2013-03-24 23:12:45 +0400
-+++ binutils-2.23.1/configure	2013-03-24 23:30:06 +0400
-@@ -2865,6 +2865,7 @@
+diff -Nuar binutils-2.27.a/configure binutils-2.27.b/configure
+--- binutils-2.27.a/configure	2016-08-03 03:54:55.000000000 -0400
++++ binutils-2.27.b/configure	2016-10-22 01:56:21.435592700 -0400
+@@ -2955,6 +2955,7 @@
    yes|default)
      # Check for ELF target.
      is_elf=no
 +    is_pe=no
      case "${target}" in
        *-*-elf* | *-*-sysv4* | *-*-unixware* | *-*-eabi* | hppa*64*-*-hpux* \
-       | *-*-linux* | frv-*-uclinux* | *-*-irix5* | *-*-irix6* \
-@@ -2876,10 +2877,12 @@
+       | *-*-linux* | *-*-gnu* | frv-*-uclinux* | *-*-irix5* | *-*-irix6* \
+@@ -2966,10 +2967,12 @@
            *)
              is_elf=yes
              ;;
@@ -17,9 +18,9 @@
 +      *-*-mingw*)
 +        is_pe=yes;;
      esac
-
+ 
 -    if test "$is_elf" = "yes"; then
 +    if test "$is_elf" = "yes" -o "$is_pe" = "yes"; then
        # Check for target supported by gold.
        case "${target}" in
-         i?86-*-* | x86_64-*-* | sparc*-*-* | powerpc*-*-* | arm*-*-*)
+         i?86-*-* | x86_64-*-* | sparc*-*-* | powerpc*-*-* | arm*-*-* \
